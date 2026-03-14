@@ -1,0 +1,48 @@
+<div class="container mt-4">
+  <h2>Registro de Nuevo Alumno</h2>
+  <hr>
+  
+  <form class="row g-3">
+  <div class="col-md-4">
+    <label class="form-label">Número de Control</label>
+    <input type="text" formControlName="numControl" class="form-control" 
+           [class.is-invalid]="registroForm.get('numControl')?.invalid && registroForm.get('numControl')?.touched">
+  </div>
+    <div class="col-md-4">
+      <label class="form-label">Nombres</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Apellido 1</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Apellido 2</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-8">
+      <label class="form-label">Domicilio</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Carrera</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Semestre</label>
+      <input type="number" class="form-control" min="1" max="12">
+    </div>
+   <div class="col-md-4">
+    <label class="form-label">Especialidad</label>
+    <select formControlName="especialidad" class="form-select">
+      <option value="" disabled selected>Seleccione una opción</option>
+      <option value="Redes">Redes</option>
+      <option value="Programador Hacker">Programador Hacker</option>
+    </select>
+  </div>
+    <div class="col-12 mt-4">
+     <button type="submit" class="btn btn-success">Guardar Alumno</button>
+      <button type="button" class="btn btn-secondary ms-2" routerLink="/menu">Cancelar</button>
+    </div>
+  </form>
+</div>
